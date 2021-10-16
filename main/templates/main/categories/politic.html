@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+
+
+<div class="body__container">
+
+    {% include 'main/includes/header.html' %}
+
+    <main>
+        {% for p in pol %}
+        <div class="main__block-content">
+            <div class="title"><h3>{{ p.news_title|upper }}</h3></div>
+            <div class="content"><p>{{ p.news_content|truncatewords:20 }}</p></div>
+            <div class="image"><img src="/media/{{ p.news_image }}" alt="{{ p.news_title }}">
+            </div>
+            <div class="btn__con"><a href="{% url 'about' p.pk %}" class="btn">Подробнее</a></div>
+        </div>      
+        {% endfor %}
+    </main>
+
+</div>
+
+{% endblock %}

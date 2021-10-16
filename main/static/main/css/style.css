@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(113, 146, 168);
+}
+
+.body__container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* 
+Общие классы для html файлов.
+
+*/
+
+/*Классы для хедера*/
+header {
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+
+header .main__menu {
+    position: absolute;
+    right: 0;
+    height: 80px;
+}
+
+header .main__menu ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+header .main__menu ul li a {
+    margin: 8px;
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease 0s;
+}
+
+header .main__menu ul li a:hover {
+    margin: 8px;
+    color: rgb(129, 70, 70);
+    font-size: 22px;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+}
+
+header .logo img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+header .logo {
+    margin: 10px;
+}
+
+.logo::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    margin-top: 12px;
+}
+
+/*Классы для мейн*/
+
+.main__block-content {
+    display: grid;
+    grid-template-areas:
+        "header sidebar"
+        "content sidebar"
+        "bot sidebar";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin: 15px 0px 100px 0px;
+    background-color: rgba(46, 89, 139, 0.438);
+    padding: 5px;
+}
+
+.title {
+    grid-area: header;
+    margin-bottom: 25px;
+    color: rgb(31, 31, 31);
+}
+
+.content {
+    grid-area: content;
+    color: rgb(20, 25, 47);
+    margin-bottom: 20px;
+}
+
+.image {
+    grid-area: sidebar;
+    margin-left: 50px;
+}
+
+.image img {
+    display: block;
+    max-width: 350px;
+}
+
+.btn__con {
+    grid-area: bot;
+}
+
+.btn {
+    color: white;
+    border-radius: 12px;
+    padding: 10px 12px;
+    background-color: rgb(136, 44, 44);
+    display: inline-block;
+}
+
+/* слайдер на главной странице */
+
+.slider__container {
+    margin: 15px auto;
+}
+
+.slider {
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+
+/* ячейка слайдера с контентом */
+.slider__content {
+    width: 1200px;
+    height: 100%;
+    background-color: cadetblue;
+    position: relative;
+}
+
+.slider__content .background__img {
+    left: 0%;
+    top: -30%;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.slider__content h1 {
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.568);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.slider__content .ns__btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    left: 15px;
+    background-color: brown;
+    padding: 12px 15px;
+    color: white;
+    border-radius: 12px;
+}
+
+.slider-line {
+    width: 600%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    left: 0px;
+    transition: all ease 1s;
+}
+
+.slider__container button {
+    padding: 12px 15px;
+    background-color: rgba(32, 56, 59, 0.733);
+    border: 15px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    margin: 16px auto;
+}
+
+.slider__container button:active {
+    padding: 10px 13px;
+    box-shadow: 0 0 8px black;
+    background-color: rgb(37, 37, 37);
+}
+
+
+/*Классы для футера*/
+
+footer {
+    max-width: 1140px;
+    margin: 0 auto;
+    min-height: 150px;
+    margin-top: 60px;
+}
+
+.f__con {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.f__con p {
+    color: rgb(45, 51, 138);
+    font-size: 18px;
+    padding: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(62, 90, 168, 0.582);
+    border-radius: 12px;
+}

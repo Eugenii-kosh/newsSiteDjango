@@ -1,0 +1,16 @@
+{% block content %}
+{% load static %}
+
+<header>
+    <div class="main__menu">
+        <ul>
+            {% for cat in model %}
+            <li><a href="{% url cat.cat_title %}">{{ cat }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="logo">
+        <a href="{% url 'main' %}"><img src="{% static 'main/logos/logo.png' %}" alt="1"></a>
+</header>
+
+{% endblock %}

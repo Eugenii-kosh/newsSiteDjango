@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'main/logos/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>    
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="f__con">
+            <p>Создатель: Евгений К. Код можно найти на github. Ссылка в описании.</p>
+        </div>
+    </footer>
+    <script src="{% static 'main/js/script.js' %}"></script>
+</body>
+</html>

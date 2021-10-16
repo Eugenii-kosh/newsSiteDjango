@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="body__container">
+
+    {% include 'main/includes/header.html' %}
+
+    <main>
+        <div class="slider__container">
+            <div class="slider">
+                <div class="slider-line">
+                    {% for n in newses %}
+                    <div class="slider__content">
+                        <h1>{{n.news_title}}</h1>
+                        <a href="{% url 'about' n.pk %}" class="ns__btn">Подробнее</a>
+                        <img src="/media/{{ n.news_image }}" alt="" class="background__img">
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+            <button class="btn__prev">Назад</button>
+            <button class="btn__next">Вперёд</button>
+
+        </div>
+    </main>
+
+</div>
+
+{% endblock %}
